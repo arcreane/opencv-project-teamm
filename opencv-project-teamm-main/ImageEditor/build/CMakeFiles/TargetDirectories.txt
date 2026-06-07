@@ -1,0 +1,5 @@
+/mnt/c/Users/solal/Downloads/opencv-project-teamm-main/opencv-project-teamm-main/ImageEditor/build/CMakeFiles/MyImageEditor.dir
+/mnt/c/Users/solal/Downloads/opencv-project-teamm-main/opencv-project-teamm-main/ImageEditor/build/CMakeFiles/edit_cache.dir
+/mnt/c/Users/solal/Downloads/opencv-project-teamm-main/opencv-project-teamm-main/ImageEditor/build/CMakeFiles/rebuild_cache.dir
+/mnt/c/Users/solal/Downloads/opencv-project-teamm-main/opencv-project-teamm-main/ImageEditor/build/CMakeFiles/MyImageEditor_autogen_timestamp_deps.dir
+/mnt/c/Users/solal/Downloads/opencv-project-teamm-main/opencv-project-teamm-main/ImageEditor/build/CMakeFiles/MyImageEditor_autogen.dir

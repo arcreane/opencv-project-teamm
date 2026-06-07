@@ -1,7 +1,7 @@
 #pragma once
 #include <QMainWindow>
 #include <opencv2/core.hpp>
-#include "core/UndoStack.h"
+#include "../core/UndoStack.h"
 
 class ImageCanvas;
 class ControlPanel;

@@ -24,8 +24,8 @@ void ImageCanvas::setImage(const cv::Mat &mat)
 cv::Point ImageCanvas::canvasToImage(const QPoint &p) const
 {
     // The pixmap is centered and scaled — find its actual rect inside the label
-    if (!pixmap() || pixmap()->isNull()) return {};
-    QSize pxSize = pixmap()->size();
+    if (pixmap().isNull()) return {};
+    QSize pxSize = pixmap().size();
     int offX = (width()  - pxSize.width())  / 2;
     int offY = (height() - pxSize.height()) / 2;
     double scaleX = (double)m_imageSize.width  / pxSize.width();

@@ -1,9 +1,14 @@
 #include "ControlPanel.h"
+#include <opencv2/imgproc.hpp>
 #include <QVBoxLayout>
 #include <QHBoxLayout>
 #include <QGroupBox>
 #include <QLabel>
 #include <QCheckBox>
+#include <QSlider>
+#include <QStackedWidget>
+#include <QComboBox>
+#include <QPushButton>
 
 // ─────────────────────────────────────────────────────────────────────────────
 

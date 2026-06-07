@@ -16,9 +16,7 @@ static cv::Mat toGray(const cv::Mat &src)
     return gray;
 }
 
-// ─────────────────────────────────────────────────────────────────────────────
 // 1. Thresholding
-// ─────────────────────────────────────────────────────────────────────────────
 
 cv::Mat ImageProcessor::thresholdBinary(const cv::Mat &src, int thresh)
 {
@@ -50,9 +48,7 @@ cv::Mat ImageProcessor::thresholdAdaptive(const cv::Mat &src, int blockSize, int
     return dst;
 }
 
-// ─────────────────────────────────────────────────────────────────────────────
 // 2. Histogram equalization
-// ─────────────────────────────────────────────────────────────────────────────
 
 cv::Mat ImageProcessor::equalizeHistGlobal(const cv::Mat &src)
 {
@@ -95,9 +91,7 @@ cv::Mat ImageProcessor::equalizeHistCLAHE(const cv::Mat &src, double clipLimit, 
     return dst;
 }
 
-// ─────────────────────────────────────────────────────────────────────────────
 // 3. Morphology
-// ─────────────────────────────────────────────────────────────────────────────
 
 cv::Mat ImageProcessor::morphologyOp(const cv::Mat &src, int op, int kernelSize, int kernelShape)
 {
@@ -111,9 +105,7 @@ cv::Mat ImageProcessor::morphologyOp(const cv::Mat &src, int op, int kernelSize,
     return dst;
 }
 
-// ─────────────────────────────────────────────────────────────────────────────
 // 4. Canny edge detection
-// ─────────────────────────────────────────────────────────────────────────────
 
 cv::Mat ImageProcessor::cannyEdge(const cv::Mat &src, double t1, double t2, int apertureSize)
 {
@@ -123,9 +115,7 @@ cv::Mat ImageProcessor::cannyEdge(const cv::Mat &src, double t1, double t2, int 
     return dst;
 }
 
-// ─────────────────────────────────────────────────────────────────────────────
 // 5. Geometric transforms
-// ─────────────────────────────────────────────────────────────────────────────
 
 cv::Mat ImageProcessor::affineTransform(const cv::Mat &src,
                                          cv::Point2f src1, cv::Point2f src2, cv::Point2f src3,
@@ -149,9 +139,8 @@ cv::Mat ImageProcessor::perspectiveTransform(const cv::Mat &src,
     return dst;
 }
 
-// ─────────────────────────────────────────────────────────────────────────────
+
 // 6. Panorama stitching
-// ─────────────────────────────────────────────────────────────────────────────
 
 cv::Mat ImageProcessor::stitchImages(const std::vector<cv::Mat> &images)
 {
@@ -173,9 +162,8 @@ cv::Mat ImageProcessor::stitchImages(const std::vector<cv::Mat> &images)
     return pano;
 }
 
-// ─────────────────────────────────────────────────────────────────────────────
 // Advanced — Cartoon effect
-// ─────────────────────────────────────────────────────────────────────────────
+
 
 cv::Mat ImageProcessor::cartoonEffect(const cv::Mat &src)
 {

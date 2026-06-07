@@ -14,6 +14,7 @@
 #include <QAction>
 #include <QActionGroup>
 #include <QKeySequence>
+#include <QApplication>
 
 #include <opencv2/imgcodecs.hpp>
 
@@ -87,7 +88,9 @@ void MainWindow::buildMenus()
     auto *fileMenu = menuBar()->addMenu("&File");
     auto *openAct  = fileMenu->addAction("&Open...", this, &MainWindow::openImage, QKeySequence::Open);
     m_saveAction   = fileMenu->addAction("&Save",    this, &MainWindow::saveImage,    QKeySequence::Save);
-    fileMenu->addAction("Save &As...", this, &MainWindow::saveImageAs);
+    auto *quitAct = fileMenu->addAction("&Quit");
+    quitAct->setShortcut(QKeySequence::Quit);
+    connect(quitAct, &QAction::triggered, qApp, &QApplication::quit);
     fileMenu->addSeparator();
     fileMenu->addAction("&Quit", qApp, &QApplication::quit, QKeySequence::Quit);
     m_saveAction->setEnabled(false);

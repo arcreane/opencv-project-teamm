@@ -1,4 +1,5 @@
 #pragma once
+#include <QImage>
 #include <opencv2/opencv.hpp>
 
 // Central hub for all image-processing operations.
